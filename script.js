@@ -6,72 +6,86 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
+        enunciado: "Qual o seu nível de conhecimento sobre os impactos das mudanças climáticas em nosso cotidiano?",
         alternativas: [
             {
-                texto: "Isso é assustador!",
-                afirmacao: "No início ficou com medo do que essa tecnologia pode fazer. "
+                texto: "Baixo",
+                afirmacao: "Você está começando a aprender sobre os impactos das mudanças climáticas. "
             },
             {
-                texto: "Isso é maravilhoso!",
-                afirmacao: "Quis saber como usar IA no seu dia a dia."
+                texto: "Médio",
+                afirmacao: "Você tem um conhecimento razoável sobre os impactos das mudanças climáticas. "
+            },
+            {
+                texto: "Alto",
+                afirmacao: "Você tem um conhecimento aprofundado sobre os impactos das mudanças climáticas. "
             }
         ]
     },
     {
-        enunciado: "Com a descoberta desta tecnologia, chamada Inteligência Artificial, uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre esta tecnologia. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de IA em sala de aula. Qual atitude você toma?",
+        enunciado: "Quais são algumas das principais causas das mudanças climáticas?",
         alternativas: [
             {
-                texto: "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
-                afirmacao: "Conseguiu utilizar a IA para buscar informações úteis."
+                texto: "Emissões de gases de efeito estufa",
+                afirmacao: "As emissões de gases de efeito estufa são uma das principais causas das mudanças climáticas. "
             },
             {
-                texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
-                afirmacao: "Sentiu mais facilidade em utilizar seus próprios recursos para escrever seu trabalho."
+                texto: "Desmatamento",
+                afirmacao: "O desmatamento contribui significativamente para as mudanças climáticas. "
+            },
+            {
+                texto: "Uso de combustíveis fósseis",
+                afirmacao: "O uso de combustíveis fósseis é uma das principais fontes de emissões de gases de efeito estufa. "
+            },
+            {
+                texto: "Todas as opções acima",
+                afirmacao: "Todas as opções mencionadas são causas principais das mudanças climáticas. "
             }
         ]
     },
     {
-        enunciado: "Após a elaboração do trabalho escrito, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
+        enunciado: "Quais são alguns dos efeitos imediatos das mudanças climáticas em diferentes regiões do mundo?",
         alternativas: [
             {
-                texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
-                afirmacao: "Vem impulsionando a inovação na área de IA e luta para abrir novos caminhos profissionais com IA."
+                texto: "Aumento das temperaturas médias",
+                afirmacao: "O aumento das temperaturas médias é um efeito imediato das mudanças climáticas. "
             },
             {
-                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
-                afirmacao: "Sua preocupação com as pessoas motivou a criar um grupo de estudos entre trabalhadores para discutir meios de utilização de IA de forma ética."
+                texto: "Aumento da frequência de eventos climáticos extremos",
+                afirmacao: "A maior frequência de eventos climáticos extremos é um impacto direto das mudanças climáticas. "
+            },
+            {
+                texto: "Acidificação dos oceanos",
+                afirmacao: "A acidificação dos oceanos é uma consequência das mudanças climáticas. "
+            },
+            {
+                texto: "Todas as opções acima",
+                afirmacao: "Todos os efeitos mencionados são impactos imediatos das mudanças climáticas. "
             }
         ]
     },
     {
-        enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
+        enunciado: "Que medidas estão sendo tomadas globalmente para mitigar as mudanças climáticas?",
         alternativas: [
             {
-                texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
-                afirmacao: "Notou também que muitas pessoas não sabem ainda utilizar as ferramentas tradicionais e decidiu compartilhar seus conhecimentos de design utilizando ferramentas de pintura digital para iniciantes."
+                texto: "Investimento em energias renováveis",
+                afirmacao: "O investimento em energias renováveis é uma das principais medidas para mitigar as mudanças climáticas. "
             },
             {
-                texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
-                afirmacao: "Acelerou o processo de criação de trabalhos utilizando geradores de imagem e agora consegue ensinar pessoas que sentem dificuldades em desenhar manualmente como utilizar também!"
-            }
-        ]
-    },
-    {
-        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda da IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz? ",
-        alternativas: [
-            {
-                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-                afirmacao: "Infelizmente passou a utilizar a IA para fazer todas suas tarefas e agora se sente dependente da IA para tudo."
+                texto: "Implementação de políticas de conservação ambiental",
+                afirmacao: "A implementação de políticas de conservação ambiental é crucial para combater as mudanças climáticas. "
             },
             {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-                afirmacao: "Percebeu que toda IA reproduz orientações baseadas na empresa que programou e muito do que o chat escrevia não refletia o que pensava e por isso sabe que os textos gerados pela IA devem servir como auxílio e não resultado final. "
+                texto: "Acordos internacionais como o Acordo de Paris",
+                afirmacao: "Acordos internacionais como o Acordo de Paris são essenciais para a ação climática global. "
+            },
+            {
+                texto: "Todas as opções acima",
+                afirmacao: "Todas as medidas mencionadas são importantes para mitigar as mudanças climáticas. "
             }
         ]
-    },
+    }
 ];
-
 
 let atual = 0;
 let perguntaAtual;
@@ -105,7 +119,7 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
+    caixaPerguntas.textContent = "Obrigado por completar o quiz!";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
