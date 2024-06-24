@@ -26,7 +26,7 @@ const perguntas = [
         enunciado: "Quais são algumas das principais causas das mudanças climáticas?",
         alternativas: [
             {
-                texto: "Emissões de gases de efeito estufa",
+                texto: "a) Emissões de gases de efeito estufa",
                 afirmacao: "As emissões de gases de efeito estufa são uma das principais causas das mudanças climáticas. "
             },
             {
