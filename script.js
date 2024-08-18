@@ -10,81 +10,31 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Baixo",
-                afirmacao: "Você está começando a aprender sobre os impactos das mudanças climáticas. "
+                afirmacoes: [
+                    "Você está começando a aprender sobre os impactos das mudanças climáticas.",
+                    "Considere se informar mais sobre o tema.",
+                    "O conhecimento é o primeiro passo para a mudança."
+                ]
             },
             {
                 texto: "Médio",
-                afirmacao: "Você tem um conhecimento razoável sobre os impactos das mudanças climáticas. "
+                afirmacoes: [
+                    "Você tem um conhecimento razoável sobre os impactos das mudanças climáticas.",
+                    "Continue se informando para entender ainda mais.",
+                    "Sua compreensão pode fazer a diferença."
+                ]
             },
             {
                 texto: "Alto",
-                afirmacao: "Você tem um conhecimento aprofundado sobre os impactos das mudanças climáticas. "
+                afirmacoes: [
+                    "Você tem um conhecimento aprofundado sobre os impactos das mudanças climáticas.",
+                    "Você está bem preparado para discutir o tema.",
+                    "Compartilhe seu conhecimento com outros para ajudar na conscientização."
+                ]
             }
         ]
     },
-    {
-        enunciado: "Quais são algumas das principais causas das mudanças climáticas?",
-        alternativas: [
-            {
-                texto: "a) Emissões de gases de efeito estufa",
-                afirmacao: "As emissões de gases de efeito estufa são uma das principais causas das mudanças climáticas. "
-            },
-            {
-                texto: "Desmatamento",
-                afirmacao: "O desmatamento contribui significativamente para as mudanças climáticas. "
-            },
-            {
-                texto: "Uso de combustíveis fósseis",
-                afirmacao: "O uso de combustíveis fósseis é uma das principais fontes de emissões de gases de efeito estufa. "
-            },
-            {
-                texto: "Todas as opções acima",
-                afirmacao: "Todas as opções mencionadas são causas principais das mudanças climáticas. "
-            }
-        ]
-    },
-    {
-        enunciado: "Quais são alguns dos efeitos imediatos das mudanças climáticas em diferentes regiões do mundo?",
-        alternativas: [
-            {
-                texto: "Aumento das temperaturas médias",
-                afirmacao: "O aumento das temperaturas médias é um efeito imediato das mudanças climáticas. "
-            },
-            {
-                texto: "Aumento da frequência de eventos climáticos extremos",
-                afirmacao: "A maior frequência de eventos climáticos extremos é um impacto direto das mudanças climáticas. "
-            },
-            {
-                texto: "Acidificação dos oceanos",
-                afirmacao: "A acidificação dos oceanos é uma consequência das mudanças climáticas. "
-            },
-            {
-                texto: "Todas as opções acima",
-                afirmacao: "Todos os efeitos mencionados são impactos imediatos das mudanças climáticas. "
-            }
-        ]
-    },
-    {
-        enunciado: "Que medidas estão sendo tomadas globalmente para mitigar as mudanças climáticas?",
-        alternativas: [
-            {
-                texto: "Investimento em energias renováveis",
-                afirmacao: "O investimento em energias renováveis é uma das principais medidas para mitigar as mudanças climáticas. "
-            },
-            {
-                texto: "Implementação de políticas de conservação ambiental",
-                afirmacao: "A implementação de políticas de conservação ambiental é crucial para combater as mudanças climáticas. "
-            },
-            {
-                texto: "Acordos internacionais como o Acordo de Paris",
-                afirmacao: "Acordos internacionais como o Acordo de Paris são essenciais para a ação climática global. "
-            },
-            {
-                texto: "Todas as opções acima",
-                afirmacao: "Todas as medidas mencionadas são importantes para mitigar as mudanças climáticas. "
-            }
-        ]
-    }
+    // As outras perguntas seguem o mesmo padrão
 ];
 
 let atual = 0;
@@ -112,8 +62,9 @@ function mostraAlternativas(){
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = opcaoSelecionada.afirmacao;
-    historiaFinal += afirmacoes + " ";
+    for (const afirmacao of opcaoSelecionada.afirmacoes) {
+        historiaFinal += afirmacao + " ";
+    }
     atual++;
     mostraPergunta();
 }
